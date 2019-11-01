@@ -66,7 +66,7 @@ Potree.Measure = class Measure extends THREE.Object3D {
 		this.areaLabel.setTextColor({r: 180, g: 220, b: 180, a: 1.0});
 		this.areaLabel.material.depthTest = false;
 		this.areaLabel.material.opacity = 1;
-		this.areaLabel.visible = false; ;
+		this.areaLabel.visible = false;
 		this.add(this.areaLabel);
 	}
 
@@ -145,9 +145,9 @@ Potree.Measure = class Measure extends THREE.Object3D {
 		{ // Event Listeners
 			let drag = (e) => {
 				let I = Potree.utils.getMousePointCloudIntersection(
-					e.drag.end, 
-					e.viewer.scene.getActiveCamera(), 
-					e.viewer, 
+					e.drag.end,
+					e.viewer.scene.getActiveCamera(),
+					e.viewer,
 					e.viewer.scene.pointclouds,
 					{pickClipped: true});
 
@@ -311,9 +311,12 @@ Potree.Measure = class Measure extends THREE.Object3D {
 
 			{ // coordinate labels
 				let coordinateLabel = this.coordinateLabels[0];
-				
+
 				let msg = position.toArray().map(p => Potree.utils.addCommas(p.toFixed(2))).join(", ");
 				//let msg = Potree.utils.addCommas(position.z.toFixed(2) + " " + this.lengthUnit.code);
+				if('classification' in point) {
+					msg += '\n Class - ' + point.classification
+				}
 				coordinateLabel.setText(msg);
 
 				coordinateLabel.visible = this.showCoordinates;

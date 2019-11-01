@@ -17,6 +17,7 @@
 		{"thumb": "thumbnails/light_ca13.png", "label": "Light CA13", "url": "light_ca13.html"},
 		{"thumb": "thumbnails/lines.png", "label": "Lines", "url": "lines.html"},
 		{"thumb": "thumbnails/lion.png", "label": "Lion", "url": "lion.html"},
+		{"thumb": "thumbnails/lion.png", "label": "Lion Custom Classification", "url": "lion_custom_classifications.html"},
 		{"thumb": "thumbnails/lion_las.png", "label": "Lion LAS", "url": "lion_las.html"},
 		{"thumb": "thumbnails/lion_las.png", "label": "Lion LAZ", "url": "lion_laz.html"},
 		{"thumb": "thumbnails/measurements.png", "label": "Measurements", "url": "measurements.html"},
